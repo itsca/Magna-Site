@@ -1,0 +1,99 @@
+// Contact Page
+// ============
+#contact-main {
+	background-color: $lightBlue;
+	#contact-top {
+		@include parlxImage('../images/backgrounds/landing/bg24.jpg', 550px);
+		@media (min-width: 801px) {
+		   height: 450px;
+		}
+		 
+		@media (max-width: 800px) {
+		   height: 450px;
+		}
+		 
+		@media (max-width: 300px) {
+		   height: 300px;
+		}
+	}
+	#contact-bottom {
+		#contact-col-1 {
+			padding: 0px;
+		}
+		#contact-col-2 {
+			color: $lightPink;
+			height: 550px;
+			padding: 2%;
+			h2 {
+				padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 2em;
+	    		font-weight: lighter;
+	    		letter-spacing: 0.1em;
+	    		border-bottom: 1px solid #FFF;
+	    		text-align: center
+			}
+			ul {
+				li {
+					margin-bottom: 0.5em;
+					a {
+						color: $lightPink;
+						transition: all 0.3s;
+						&:hover {
+							color: $lightPink;
+							text-decoration: none
+						}
+						&:visited:active {
+							color: $lightPink;
+							text-decoration: none
+						}
+					}
+				}
+			}
+			.btn {
+				background-color: transparent;
+				@include btnOne($lightPink, $pinkSand, $mainNavBreakPoint);
+			}
+		}
+	}
+	#form-submitted-correctly {
+		display: none;
+		position: absolute;
+	    background: $lightBlue;
+	    width: 96%;
+	    height: 95%;
+	    z-index: 1;
+	    padding: 5%;
+	    &.open {
+	    	display: block;
+	    }
+	    #submitted-correctly-closer {
+    	    display: block;
+		    padding: 2% 1%;
+		    width: 40%;
+		    margin: 0 auto;
+		    text-align: center;
+		    text-decoration: none;
+		    color: #fff;
+		    border: 1px solid #fff;
+		    transition: all 0.5s;
+		    font-size: 1.2em;
+		    margin-bottom: 1.5em;
+		    background: transparent;
+		    &:hover {
+		    	background-color: #fff;
+  				color: $lightBlue;
+		    }
+	    }
+	}
+}
+
+
+
+
+
+
+
+
+
+

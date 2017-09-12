@@ -1,0 +1,152 @@
+// Amenities Page
+// ============
+#amenities-main {
+	color: $pinkSand;
+	h1 {
+		padding-bottom: 0.4em;
+		font-family: $headFont;
+		font-size: 2em;
+		font-weight: lighter;
+		letter-spacing: 0.1em;
+		border-bottom: 1px solid;
+		margin-bottom: 1.5em;
+	}
+	#sec1 {
+		@include parlxImage('../images/backgrounds/landing/bg30.jpg', 450px);
+		.welcome-copy {
+			position: absolute;
+	    	top: 30%;
+	    	right: 10%;
+	    	width: 30%;
+	    	min-width: 250px;
+	    	padding: 2%;
+	    	font-size: 0.9em;
+	    	@include scrollHidden($lightPink, $lightBlue, 0.88, translateX, -20%, 1s);
+	    	z-index: 8;
+	    	@media (max-width: $mainNavBreakPoint) {
+				font-size: 0.8em;
+			}
+	    	h2 {
+	    		padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 2em;
+	    		font-weight: lighter;
+	    		letter-spacing: 0.1em;
+	    		border-bottom: 1px solid #FFF;
+	    	}
+	    	p {
+	    		font-size: 1.1em;
+	    	}
+	    	.btn-style-1 {
+				@include btnOne($lightPink, $lightBlue, $mainNavBreakPoint);
+				font-size: 1.2em;
+			}
+		}
+	}
+	#sec2 {
+		padding-top: 3em;
+		padding-bottom: 1em;
+		.copy {
+			padding: 3%;
+			margin: 0 auto;
+	    	display: block;
+	    	float: none;
+	    	margin-top: 15em;
+	    	text-align: center;
+		    @include scrollHidden($lightPink, $pinkSand, 0.70, translateY, -20%, 1.5s);
+		    @media (max-width: $mainNavBreakPoint) {
+				//font-size: 0.8em;
+			}
+		}
+		h2 {
+			padding-bottom: 0.4em;
+			font-family: $headFont;
+			font-size: 1.5em;
+			letter-spacing: 0.1em;
+			text-align: center;
+			margin-bottom: 1.5em;
+		}
+		.btn-style-2 {
+			@include btnOne($lightPink, $pinkSand, $mainNavBreakPoint);
+			font-size: 1.2em;
+			margin-bottom: 1.5em;
+		}
+		.row {
+			margin-bottom: 0.5em;
+			p {
+				//text-align: center;
+				//font-size: 1em;
+				color: #888;
+				font-size: 1.2em;
+			}
+			i {
+				color: $lightBlue;
+				font-size: 2em;
+			}
+		}
+		.amenitie {
+			@media (max-width: 768px) {
+				margin-bottom: 2em;
+			}
+		}
+		.amenIcon {
+			font-size: 1.2em;
+			display: block;
+			width: 100%;
+			text-align: left;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	#sec7 { 
+		@include parlxImage('../images/backgrounds/landing/bg6.jpg', 650px);
+		padding-top: 8em;
+		.copy {
+			background-color: rgba($pinkSand, 0.70);
+			padding: 3%;
+			margin: 0 auto;
+	    	display: block;
+	    	float: none;
+	    	opacity: 0;
+	    	-webkit-transform: translateY(-20%);
+		    -moz-transform: translateY(-20%);
+		    -ms-transform: translateY(-20%);
+		    transform: translateY(-20%);
+		    -webkit-transition: all 1.5s;
+		    -moz-transition: all 1.5s;
+		    -ms-transition: all 1.5s;
+		    transition: all 1.5s;
+			h2 {
+				color: $lightPink;
+				padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 1.5em;
+	    		letter-spacing: 0.1em;
+	    		text-align: center;
+	    		margin-bottom: 1.5em;
+			}
+			.btn-style-2 {
+				@include btnOne($lightPink, $pinkSand, $mainNavBreakPoint);
+				font-size: 1.2em;
+				margin-bottom: 1.5em;
+			}
+			&.showing {
+	    		opacity: 1;
+	    		-webkit-transform: translateX(0%);
+		        -moz-transform: translateX(0%);
+		        -ms-transform: translateX(0%);
+		        transform: translateX(0%);
+	    	}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

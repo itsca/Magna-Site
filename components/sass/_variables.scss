@@ -1,9 +1,25 @@
 // _variables.scss
 // =================
 // importing gooogle fonts
-@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
+@import "http://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400|Lato";
+@font-face {
+	font-family: "DIN";
+	src: url("../fonts/DIN.ttf");
+}
 //colors
-$colorName         : #000;
+$lightPink        : #F9F6F2;
+$pinkSand         : #d0ad8a;
+$lightBlue		  : #79b3c4;
+
+$lightGreen       : #00A99D;
+$lightGrey	      : #999999;
+$darkGrey         : #B3B3B3;
 //fonts
-$headFont : 'Patua One', sans-serif;
-$bodyFont : 'Inika', serif;
+$headFont 		  : 'Quicksand', sans-serif;
+$bodyFont 		  : 'Lato', serif;
+
+$font1 		  : 'Open-Sans', sans-serif;
+$font2 		  : 'Roboto';
+$font3 		  : 'DIN';
+//breakPoints
+$mainNavBreakPoint : 993px;

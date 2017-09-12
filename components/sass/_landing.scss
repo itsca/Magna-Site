@@ -1,0 +1,204 @@
+// Landing Page
+// ============
+#main-landing {
+	#sec1 {
+		@include parlxImage('../images/backgrounds/landing/bg1.jpg', 650px);
+		#welcome-copy {
+			position: absolute;
+	    	top: 50%;
+	    	right: 0%;
+	    	width: 50%;
+	    	min-width: 250px;
+	    	padding: 2%;
+	    	@include scrollHidden($lightPink, $lightGreen, 0.78, translateX, -20%, 1s);
+	    	h1 {
+	    		padding-bottom: 0.4em;
+	    		font-family: $font2;
+	    		font-size: 2.8em;
+	    		//font-weight: 300;
+	    		//letter-spacing: 0.1em;
+	    		//border-bottom: 1px solid #FFF;
+	    		text-align: right;
+	    	}
+	    	p {
+	    		font-size: 1.1em;
+	    	}
+		}
+		#keep-scrolling {
+			margin-top: 580px;
+		    margin-left: 50%;
+		    z-index: 3;
+			font-size: 3.5em;
+			color: $lightGreen;
+			-webkit-animation: scrolls 1.2s ease-out infinite;
+		}	
+	}
+
+	#sec2 {
+		@include dividerSection(#F2F2F2, $lightGrey);
+		p {
+			margin-bottom: 1.5em;
+			font-size: 1.5em;
+	    	font-family: $font1;
+	    	color: $lightGrey;
+	    	text-align: center;
+		}
+		#challenges {
+			.challenges-list {
+				margin-bottom: 2em;
+				ul{
+					//border:1px solid #ccc;
+				    list-style:none;
+				    margin:0;
+				    padding:0;
+				    text-align:center;
+				    .icon {
+				    	display: inline-block;
+				    	border: 1px solid $darkGrey;
+				    	border-radius: 80px;
+				    	padding: 8%;
+				    	@media (max-width: $mainNavBreakPoint) {
+							padding: 2%;
+						}
+				    }
+				    #clock {
+				    	@media (max-width: $mainNavBreakPoint) {
+							padding-top: 6%;
+						}
+				    }
+					li {
+						width: 20%;
+						min-width: 80px;
+						margin-left: 1em;
+						margin-bottom: 2em;
+						display:inline-block;
+						svg {
+							max-width: 180px;
+							min-width: 80px;
+						}
+						p {
+							display:inline-block;
+							margin: 0.3em auto; 
+							font-size: 1.5em;
+		    				padding:10px 15px;
+							color: $lightGrey;
+							text-decoration: none;
+							border-bottom: 1px solid transparent;
+							transition: all 1s;
+							@media (max-width: $mainNavBreakPoint) {
+								font-size: 1em;
+								padding: 5px 0px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	#sec3 { 
+		@include dividerSection(#1A1A1A, #FFF);
+		.svg-container {
+			text-align: center
+			svg {
+
+			}
+		}
+		.proc-list {
+			padding-top: 1.2em;
+			font-size: 2.5em;
+			color: $lightGreen;
+			li {
+				margin-bottom: 2em;
+				@media (max-width: $mainNavBreakPoint) {
+					font-size: 0.8em;
+				}
+				span {
+					    font-size: 1.5em;
+					    border: 1px solid #00A99D;
+					    width: 80px;
+					    height: 80px;
+					    border-radius: 60px;
+					    display: inline-block;
+					    text-align: center;
+					    float: left;
+    					margin-right: 0.5em;
+    					@media (max-width: $mainNavBreakPoint) {
+							padding-top: 0.2em;
+						}
+				}
+			}
+		}	
+	}
+
+	#sec4 { 
+	 @include parlxImage('../images/backgrounds/landing/bg2.jpg', 550px);
+	 padding-top: 2em;
+	 .servicesList {
+			margin-bottom: 2em;
+			ul{
+				//border:1px solid #ccc;
+			    list-style:none;
+			    margin:0;
+			    padding:0;
+			    text-align:center;
+			    .icon {
+			    	display: inline-block;
+			    	border: 1px solid $darkGrey;
+			    	border-radius: 80px;
+			    	padding: 8%;
+			    	@media (max-width: $mainNavBreakPoint) {
+						padding: 2%;
+					}
+			    }
+			    #clock {
+			    	@media (max-width: $mainNavBreakPoint) {
+						padding-top: 6%;
+					}
+			    }
+				li {
+					width: 20%;
+					min-width: 80px;
+					margin-left: 1em;
+					margin-bottom: 2em;
+					display:inline-block;
+					svg {
+						max-width: 180px;
+						min-width: 80px;
+					}
+
+					background: rgba(0,169,157,0.7);
+					p {
+						display:inline-block;
+						margin: 0.3em auto; 
+						font-size: 1.5em;
+	    				padding:10px 15px;
+						color: $lightGrey;
+						text-decoration: none;
+						border-bottom: 1px solid transparent;
+						transition: all 1s;
+						@media (max-width: $mainNavBreakPoint) {
+							font-size: 1em;
+							padding: 5px 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#sec5 { 
+	 @include dividerSection($darkGrey, #FFF);
+	}
+}
+
+
+
+
+
+
+
+
+
+

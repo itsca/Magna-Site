@@ -3,11 +3,26 @@
  
 //Compass imports
 @import "compass";
+@import "compass/reset";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
  
 //Core partials
 @import "variables";
 @import "mixins";
 @import "base";
 @import "modules";
- 
+
+//Page Partials
+@import "landing";
+@import "lifestyle";
+@import "zone";
+@import "apartments";
+@import "amenities";
+@import "contact";
+
+//Library Partials
+@import "headroom";
+
 // JS partials

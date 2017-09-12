@@ -1,1 +1,1 @@
-# Code for my personal website.
+# Website for Condo Peninsula

@@ -1,6 +1,6 @@
 // _mixins
 // ========
-@mixin backImage($image) {
+@mixin backImage($image, $divHeight) {
   background: url($image) no-repeat 50% 20% ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,22 +13,168 @@
   transition: all 0.3s ease-out;
  
   @media (min-width: 801px) {
-   height: 350px;
+   height: $divHeight;
   }
  
   @media (max-width: 800px) {
-   height: 150px;
+   height: $divHeight;
   }
  
   @media (max-width: 300px) {
-   height: 100px;
+   height: $divHeight;
   }
 }
+
+//==========
+
+@mixin parlxImage($image, $divHeight) {
+  background: url($image) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
  
+  @media only screen and (max-device-width: 1024px) {
+    background-attachment: scroll;
+  }
+
+  @media (min-width: 801px) {
+    height: $divHeight;
+  }
+ 
+  @media (max-width: 800px) {
+    height: $divHeight;
+  }
+ 
+  @media (max-width: 300px) {
+    height: $divHeight;
+  }
+
+}
+//===========
 @mixin clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
+  }
+}
+//===========
+@mixin animBoostrapMenuBttn($showWidth, $barColor) {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 22.5px;
+  display: none;
+  user-select: none;
+  box-sizing: content-box;
+  cursor: pointer;
+  @media (max-width: $showWidth) {
+    opacity: 1;
+    display: inline-block;
+  }
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    height: 2px;
+    background: $barColor;
+    margin-bottom: 3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+  }
+  .one,
+  .two {
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
+  }
+  &[aria-expanded="true"] {
+    .one {
+      transform: rotate3d(0, 0, 1, 45deg);
+      -webkit-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+    }
+    .two {
+      opacity: 0;
+    }
+    .three {
+      transform: rotate3d(0, 0, 1, -45deg);
+      -webkit-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+    }
+  }
+}
+//===========
+@mixin dividerSection($Bgc, $FontC) {
+  background-color: $Bgc;
+  padding: 8% 5%;
+  h2 {
+    color: $FontC;
+    font-family: $font2;
+    font-weight: 100;
+    font-size: 2.5em;
+    //letter-spacing: 0.1em;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    span {
+      color: $lightGreen;
+    }
+  }
+}
+//===========
+//===========
+@mixin scrollHidden($color, $bgc, $bgo, $transformation, $transformPer, $transitionDur) {
+  color: $color;
+  background-color: rgba($bgc, $bgo);
+  opacity: 0;
+  -webkit-transform: $transformation + "(" + $transformPer + ")";
+  -moz-transform: $transformation + "(" + $transformPer + ")";
+  -ms-transform: $transformation + "(" + $transformPer + ")";
+  transform: $transformation + "(" + $transformPer + ")";
+  -webkit-transition: all $transitionDur;
+  -moz-transition: all $transitionDur;
+  -ms-transition: all $transitionDur;
+  transition: all $transitionDur;
+  &.showing {
+    opacity: 1;
+    -webkit-transform: $transformation + "(" + 0% + ")";
+    -moz-transform: $transformation + "(" + 0% + ")";
+    -ms-transform: $transformation + "(" + 0% + ")";
+    transform: $transformation + "(" + 0% + ")";
+  }
+}
+//===========
+@mixin btnOne($color1, $color2, $breakPoint) {
+  display: block;
+  padding: 2% 1%;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  color: $color1;
+  border: 1px solid $color1;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $color1;
+    color: $color2;
+  }
+  @media (max-width: $breakPoint) {
+    width: 100%;
   }
 }

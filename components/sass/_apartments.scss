@@ -1,0 +1,226 @@
+// Apartments Page
+// ============
+#apartments-main {
+	color: $pinkSand;
+	h1 {
+		padding-bottom: 0.4em;
+		font-family: $headFont;
+		font-size: 2em;
+		font-weight: lighter;
+		letter-spacing: 0.1em;
+		border-bottom: 1px solid;
+		margin-bottom: 1.5em;
+	}
+	#sec1 {
+		position: relative;
+		overflow: hidden;
+		.welcome-copy {
+			position: absolute;
+	    	top: 30%;
+	    	right: 10%;
+	    	width: 30%;
+	    	min-width: 250px;
+	    	padding: 2%;
+	    	font-size: 0.9em;
+	    	@include scrollHidden($lightPink, $lightBlue, 0.88, translateX, -20%, 1s);
+	    	z-index: 8;
+	    	@media (max-width: $mainNavBreakPoint) {
+				font-size: 0.8em;
+			}
+	    	h2 {
+	    		padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 2em;
+	    		font-weight: lighter;
+	    		letter-spacing: 0.1em;
+	    		border-bottom: 1px solid #FFF;
+	    	}
+	    	p {
+	    		font-size: 1.1em;
+	    	}
+	    	.btn-style-1 {
+				@include btnOne($lightPink, $lightBlue, $mainNavBreakPoint);
+				font-size: 1.2em;
+			}
+		}
+		.hidden-col {
+			height: 100%;
+			padding: 5%;
+			padding-top: 15%;
+			@include scrollHidden($lightPink, $lightBlue, 0.88, translateX, 20%, 1.3s);
+	    	@media (max-width: $mainNavBreakPoint) {
+				font-size: 0.7em;
+			}
+			p {
+				font-size: 1.5em;
+				margin-bottom: 1.5em;
+			}
+			.btn-style-1 {
+				@include btnOne($lightPink, $lightBlue, $mainNavBreakPoint);
+			}
+		}
+		.copy {
+			padding: 3%;
+			margin: 0 auto;
+	    	display: block;
+	    	float: none;
+		    @include scrollHidden($lightPink, $pinkSand, 0.70, translateY, -20%, 1.5s);
+		    @media (max-width: $mainNavBreakPoint) {
+				font-size: 0.8em;
+			}
+			h2 {
+				padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 1.5em;
+	    		letter-spacing: 0.1em;
+	    		text-align: center;
+	    		margin-bottom: 1.5em;
+			}
+			.btn-style-2 {
+				@include btnOne($lightPink, $pinkSand, $mainNavBreakPoint);
+				font-size: 1.2em;
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	#sec1 {
+		@include parlxImage('../images/backgrounds/landing/bg29.jpg', 650px);
+	}
+
+	#sec2 {
+		a {
+			color: $pinkSand;
+			&:hover, &:visited, &:focus {
+				color: $pinkSand;
+			}
+		}
+		padding-top: 5em;
+		.row {
+			margin-bottom: 3em;
+		}
+		.aparment-type {
+			overflow: hidden;
+			@media (max-width: 768px) {
+				margin-bottom: 1.5em;
+			}
+
+			.apart-type-copy {
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+			.apart-type-img {
+			    -webkit-transition: all 0.8s ease;
+				-moz-transition: all 0.8s ease;
+				-ms-transition: all 0.8s ease;
+				transition: all 0.8s ease;
+			}
+			&:hover {
+				.apart-type-img {
+					-webkit-transform: scale(1.6);
+				    -moz-transform: scale(1.6);
+				    -o-transform: scale(1.6);
+				    -ms-transform: scale(1.6);
+				}
+			}
+		}
+		.apart-type-img-wrapper {
+			max-height: 160px;
+			overflow: hidden;
+		}
+		#apartment-type-A {
+			.apart-type-img {
+				@include backImage('../images/backgrounds/landing/bg26.jpg', 150px);
+			}
+		}
+		#apartment-type-B {
+			.apart-type-img {
+				@include backImage('../images/backgrounds/landing/bg27.jpg', 150px);
+			}
+		}
+		#apartment-type-C {
+			.apart-type-img {
+				@include backImage('../images/backgrounds/landing/bg28.jpg', 150px);
+			}
+		}
+		#apartment-type-C1 {
+			.apart-type-img {
+				@include backImage('../images/backgrounds/landing/bg29.jpg', 150px);
+			}
+		}
+		#apartment-type-C2 {
+			.apart-type-img {
+				@include backImage('../images/backgrounds/landing/bg30.jpg', 150px);
+			}
+		}
+	}
+	.hidden-gal {
+		display: none;
+		position: fixed;
+    	z-index: 20;
+		width: 100%;
+		height: 100%;
+		padding: 0px 10%;
+		background-color: rgba(#181818, 0.8);
+		transition: all 0.4s;
+		.gal {
+			position: absolute;
+			width: 80%;
+			height: 100%;
+			@include backImage('../images/backgrounds/landing/bg30.jpg', 100%);
+		}
+		.next {
+			opacity: 0;
+			z-index: 19;
+		}
+		.current {
+			opacity: 1;
+			z-index: 20;
+		}
+		.slider {
+			position: fixed;
+			top: 45%;
+			cursor: pointer;
+			transition: all 0.3s;
+			padding: 2%;
+			i {
+				font-size: 4.2em;
+			}
+			&:hover {
+				color: $lightBlue;
+			}
+		}
+		.closer {
+			color: $pinkSand;
+			z-index: 21;
+			position: fixed;
+			top: 1.5%;
+			right: 5%;
+			cursor: pointer;
+			transition: all 0.3s;
+			padding: 1%;
+			i {
+				font-size: 2.2em;
+			}
+			&:hover {
+				color: $lightBlue;
+			}
+		}
+		.slider-left {
+			left: 3%;
+		}
+		.slider-right {
+			right: 3%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

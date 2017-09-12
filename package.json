@@ -1,13 +1,14 @@
 {
-  "name": "newProyectName",
+  "name": "CondoPeninsulaSite",
   "version": "0.0.1",
-  "description": "Base for a new proyect",
+  "description": "Site for Condo Peninsula",
   "repository": {
     "type": "git",
     "url": "?.git"
   },
   "author": "Javier Escalante",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-compass": "^2.1.0",
@@ -18,6 +19,12 @@
     "gulp-minify-html": "^1.0.6",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
+    "headroom.js": "^0.9.3",
     "jquery": "^3.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "headroom.js": "^0.9.3"
   }
 }

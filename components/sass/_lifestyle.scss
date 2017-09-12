@@ -1,0 +1,65 @@
+// Lifestyle Page
+// ============
+#lifestyle-main {
+	#sec1, #sec2, #sec3, #sec4 {
+		position: relative;
+		.welcome-copy {
+			position: absolute;
+	    	top: 30%;
+	    	right: 10%;
+	    	width: 30%;
+	    	min-width: 250px;
+	    	padding: 2%;
+	    	font-size: 0.8em;
+	    	@include scrollHidden($lightPink, $lightBlue, 0.88, translateX, -20%, 1s);
+	    	z-index: 8;
+	    	@media (max-width: $mainNavBreakPoint) {
+				font-size: 0.7em;
+			}
+	    	h2 {
+	    		padding-bottom: 0.4em;
+	    		font-family: $headFont;
+	    		font-size: 2em;
+	    		font-weight: lighter;
+	    		letter-spacing: 0.1em;
+	    		border-bottom: 1px solid #FFF;
+	    	}
+	    	p {
+	    		font-size: 1.1em;
+	    	}
+	    	.btn-style-1 {
+				@include btnOne($lightPink, $lightBlue, $mainNavBreakPoint);
+				font-size: 1.2em;
+			}
+		}
+	}
+	
+	#sec2, #sec4 {
+		.welcome-copy {
+	    	left: 20%;
+		}
+	}
+
+	#sec1 {
+		@include parlxImage('../images/backgrounds/landing/bg31.jpg', 650px);
+	}
+	#sec2 {
+		@include parlxImage('../images/backgrounds/landing/bg32.jpg', 650px);
+	}
+	#sec3 {
+		@include parlxImage('../images/backgrounds/landing/bg37.jpg', 650px);
+	}
+	#sec4 {
+		@include parlxImage('../images/backgrounds/landing/bg35.jpg', 650px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
